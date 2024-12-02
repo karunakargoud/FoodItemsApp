@@ -1,0 +1,28 @@
+﻿@using FoodItemsApp.Models
+@model List<FoodItems>
+    ViewBag.Title = "ShowFoodItems";
+}
+
+<h2>ShowFoodItems</h2>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Food Item Name</th>
+        <th>Food Item Type</th>
+        <th>Price</th>
+    </tr>
+        @{
+          foreach(FoodItems f in Model)
+            {
+               <tr>
+                   <td>@f.Id</td>
+                   <td>@f.FoodItemName</td>
+                   <td>@f.FoodItemType</td>
+                   <td>@f.Price</td>
+               </tr>
+
+
+            }
+        }
+    
+</table>

@@ -1,0 +1,26 @@
+﻿@using FoodItemsApp.Models
+@model FoodItems
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table>
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Food Item Name</th>
+        <td>@Model.FoodItemName</td>
+    </tr>
+    <tr>
+        <th>Food Item Type</th>
+        <td>@Model.FoodItemType</td>
+    </tr>
+    <tr>
+        <th>Price</th>
+        <td>@Model.Price</td>
+    </tr>
+</table>
+

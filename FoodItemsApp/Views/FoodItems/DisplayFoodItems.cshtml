@@ -1,0 +1,31 @@
+﻿@using FoodItemsApp.services
+@using FoodItemsApp.Models
+
+@{
+    ViewBag.Title = "DisplayFoodItems";
+}
+@{
+    MyLib lib = new MyLib();
+    List<FoodItems> FoodItemslist = lib.GetFoodItemsList();
+        }
+
+<h2>DisplayFoodItems</h2>
+<table>
+    <tr>
+        <th>Id </th>
+        <th>Food Item Name</th>
+        <th>Food Item Type</th>
+        <th>Price</th>
+    </tr>
+    @{ 
+        foreach(FoodItems f in FoodItemslist)
+            {
+                <tr>
+                    <td>@f.Id</td>
+                    <td>@f.FoodItemName</td>
+                    <td>@f.FoodItemType</td>
+                    <td>@f.Price</td>
+                </tr>
+            }
+          }
+</table>
